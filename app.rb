@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player'
+require './lib/game'
 
 class BattleApp < Sinatra::Base
 
@@ -10,22 +11,19 @@ class BattleApp < Sinatra::Base
   end
 
   get '/play' do
-    @player1 = $player1
-    @player2 = $player2
+    @game = $game
     erb(:play)
   end
 
   post '/names' do
-    $player1 = Player.new(params['player_1_name'])
-    $player2 = Player.new(params['player_2_name'])
-    $game = Game.new($player1, $player2)
+    $game = Game.new(Player.new(params['player_1_name']),
+      Player.new(params['player_2_name']))
     redirect('/play')
   end
 
   get '/attack' do
-    @player1 = $player1
-    @player2 = $player2
-    $game.attack(@player2)
+    @game = $game
+    @game.attack(@game.player2)
     erb(:attack)
   end
 
