@@ -4,7 +4,7 @@ feature 'game ends', :type => :feature do
     allow(Kernel).to receive(:rand).and_return(10)
     sign_in_and_play
     multiple_attack(18)
-    click_button 'Attack'
+    click_button 'Attack - Scratch'
     expect(page).to have_content 'Bob has been defeated! Ben wins!'
   end
 end

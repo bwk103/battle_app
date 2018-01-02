@@ -6,7 +6,7 @@ def sign_in_and_play
 end
 
 def single_attack
-  click_button 'Attack'
+  click_button 'Attack - Bite'
   click_link 'OK'
 end
 
