@@ -17,8 +17,8 @@ describe Player do
   end
 
   describe "#received_damage" do
-    it "reduces the player's hit points by 10" do
-      expect { player1.receive_damage }.to change { player1.hit_points }.by -10
+    it "reduces the player's hit points" do
+      expect { player1.receive_damage(10) }.to change { player1.hit_points }.by -10
     end
   end
 end

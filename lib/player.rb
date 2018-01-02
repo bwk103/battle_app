@@ -7,7 +7,7 @@ class Player
     @hit_points = hit_points
   end
 
-  def receive_damage
-    @hit_points -= 10
+  def receive_damage(power)
+    @hit_points -= power
   end
 end

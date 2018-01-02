@@ -38,3 +38,11 @@ As a Player,
 So I can Lose a game of Battle,
 I want to see a 'Lose' message if I reach 0HP first
 ```
+
+# Extension User Stories:
+
+```
+As a Player,
+So I can play a suspenseful game of Battle,
+I want all Attacks to deal a random amount of damage
+```

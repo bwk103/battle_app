@@ -24,10 +24,6 @@ class Game
     @players.last
   end
 
-  def attack(player)
-    player.receive_damage
-  end
-
   def change_player
     @current_player, @opponent = @opponent, @current_player
   end
@@ -35,5 +31,4 @@ class Game
   def game_over?
     opponent.hit_points == 0
   end
-
 end

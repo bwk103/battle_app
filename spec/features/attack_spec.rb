@@ -6,7 +6,8 @@ feature 'attacking', :type => :feature do
     expect(page).to have_content 'Ben attacked Bob'
   end
 
-  scenario "an attack reduces the receiving player's HP by 10" do
+  scenario "an attack reduces the receiving player's HP by a random number" do
+    allow(Kernel).to receive(:rand).and_return(10)
     sign_in_and_play
     click_button 'Attack'
     click_link 'OK'
