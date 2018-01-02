@@ -22,11 +22,24 @@ class BattleApp < Sinatra::Base
     redirect('/play')
   end
 
+  post '/attack' do
+    Attack.run($game.opponent)
+    if $game.game_over?
+      redirect('/game-over')
+    else
+      redirect('/attack')
+    end
+  end
+
   get '/attack' do
     @game = $game
-    Attack.run(@game.opponent)
     @game.change_player
     erb(:attack)
+  end
+
+  get '/game-over' do
+    @game = $game
+    erb(:finish)
   end
 
 end
