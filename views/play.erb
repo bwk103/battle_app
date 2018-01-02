@@ -1,6 +1,7 @@
 <h1><%=@game.player1.name%> vs <%=@game.player2.name%></h1>
 
-<h3><%=@game.player2.name %>'s HP: <%=@game.player2.hit_points%></h3>
+<h3>Your HP: <%=@game.current_player.hit_points%></h3>
+<h3><%=@game.opponent.name %>'s HP: <%=@game.opponent.hit_points%></h3>
 
 <h4><%=@game.current_player.name%>'s turn'</h4>
 

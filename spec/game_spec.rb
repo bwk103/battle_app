@@ -30,11 +30,4 @@ describe Game do
       expect(game.current_player).to eq player2
     end
   end
-
-  describe "#attack" do
-    it "attacks a player" do
-      expect(player1).to receive :receive_damage
-      game.attack(player1)
-    end
-  end
 end
