@@ -2,6 +2,9 @@ require 'sinatra/base'
 require './lib/player'
 require './lib/game'
 require './lib/attack'
+require './lib/paralyse'
+require './lib/heal'
+require './lib/hypnosis'
 
 class BattleApp < Sinatra::Base
 
@@ -37,6 +40,37 @@ class BattleApp < Sinatra::Base
   get '/attack' do
     @game.change_player
     erb(:attack)
+  end
+
+  post '/paralyse' do
+    Paralyse.run(@game.opponent)
+    if @game.opponent.paralysed
+      redirect('/paralysed')
+    else
+      redirect('/missed')
+    end
+  end
+
+  get '/paralysed' do
+    @game.opponent.recover
+    erb(:paralyse)
+  end
+
+  get '/missed' do
+    @game.change_player
+    erb(:missed)
+  end
+
+  get '/heal' do
+    Heal.run(@game.current_player)
+    @game.change_player
+    erb(:heal)
+  end
+
+  get '/hypnosis' do
+    Hypnosis.new(@game.opponent)
+    @game.opponent.recover
+    erb(:hypnosis)
   end
 
   get '/game-over' do

@@ -3,10 +3,19 @@
 <h3>Your HP: <%=@game.current_player.hit_points%></h3>
 <h3><%=@game.opponent.name %>'s HP: <%=@game.opponent.hit_points%></h3>
 
-<h4><%=@game.current_player.name%>'s turn'</h4>
+<h4><%=@game.current_player.name%>'s turn</h4>
 
 <form action="/attack" method="post">
   <input type="submit" value="Attack - Bite">
   <input type="submit" value="Attack - Scratch">
   <input type="submit" value="Attack - Karate Chop">
+</form>
+<form action="/paralyse" method="post">
+  <input type="submit" value="Paralyse">
+</form>
+<form action="/heal">
+  <input type="submit" value="Heal">
+</form>
+<form action="/hypnosis">
+  <input type="submit" value="Hypnosis">
 </form>

@@ -9,13 +9,13 @@ class Attack
   end
 
   def run
-    @player.receive_damage(attack_strength)
+    @player.receive_damage(strength)
   end
 
   private
 
-  def attack_strength
+  def strength
     Kernel.rand(1..10)
   end
-  
+
 end
