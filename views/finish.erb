@@ -1,1 +1,6 @@
-<%=@game.opponent.name %> has been defeated! <%=@game.current_player.name %> wins!
+<div class="confirmation_message text-center">
+  <h1>GAME OVER</h1>
+  <h2><%=@game.current_player.name%> wins!</h2>
+  <h3><%=@game.opponent.name%> has been defeated</h3>
+  <a class="btn btn-primary"href="/">Play Again</a>
+</div>

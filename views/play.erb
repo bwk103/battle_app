@@ -1,21 +1,62 @@
-<h1><%=@game.player1.name%> vs <%=@game.player2.name%></h1>
+<div id="title" class="row text-center">
+  <div class="col-lg-12">
+    <h1><%=@game.player1.name%> vs <%=@game.player2.name%></h1>
+    <hr>
+  </div>
+</div>
 
-<h3>Your HP: <%=@game.current_player.hit_points%></h3>
-<h3><%=@game.opponent.name %>'s HP: <%=@game.opponent.hit_points%></h3>
+<div id="turn_indicator" class="row text-center">
+  <div class="col-lg-12">
+    <h2><%=@game.current_player.name%>'s turn</h2>
+  </div>
+</div>
 
-<h4><%=@game.current_player.name%>'s turn</h4>
+<div id="health_points" class="row">
+  <div class="col-lg-6">
+    <h3><%=@game.current_player.name%>'s HP: <%=@game.current_player.hit_points%></h3>
+  </div>
+  <div class="col-lg-6 text-right">
+    <h3><%=@game.opponent.name %>'s HP: <%=@game.opponent.hit_points%></h3>  </div>
+</div>
 
-<form action="/attack" method="post">
-  <input type="submit" value="Attack - Bite">
-  <input type="submit" value="Attack - Scratch">
-  <input type="submit" value="Attack - Karate Chop">
-</form>
-<form action="/paralyse" method="post">
-  <input type="submit" value="Paralyse">
-</form>
-<form action="/heal">
-  <input type="submit" value="Heal">
-</form>
-<form action="/hypnosis">
-  <input type="submit" value="Hypnosis">
-</form>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card text-center">
+      <i class="fas fa-bomb"></i>
+      <div class="card-body">
+        <h5 class="card-title text-center">Attack</h5>
+        <form action="/attack" method="post">
+          <input class="btn btn-primary btn-block" type="submit" name="move" value="Bite">
+          <input class="btn btn-primary btn-block" type="submit" name="move" value="Scratch">
+          <input class="btn btn-primary btn-block" type="submit" name="move" value="Karate Chop">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center">
+      <i class="fas fa-shield-alt"></i>
+      <div class="card-body">
+        <h5 class="card-title text-center">Defend</h5>
+        <form class="form-inline" action="/heal">
+          <input class="btn btn-primary btn-block" type="submit" name="move" value="Heal">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card text-center">
+      <i class="fas fa-heartbeat"></i>
+      <div class="card-body">
+        <h5 class="card-title">Special</h5>
+        <form id=#paralyse class="form-inline" action="/paralyse" method="post">
+          <input class="btn btn-primary btn-block" type="submit" value="Paralysis">
+        </form>
+        <form class="form-inline" action="/hypnosis">
+          <input class="btn btn-primary btn-block" type="submit" name="move" value="Hypnosis">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

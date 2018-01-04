@@ -1,0 +1,84 @@
+body {
+  background: #173753;
+}
+
+h1 {
+  font-family: 'VT323', monospace;
+  font-size: 150px;
+  font-weight: bold;
+  color: #0496FF
+}
+
+hr {
+  margin-top: -20px;
+  border: 2px solid #F7CB15
+}
+
+span {
+  font-family: 'VT323', monospace;
+  font-size: 100px;
+  color: #F7CB15
+}
+
+#health_points h3 {
+  margin-top: 20px;
+  color: #E8EEF2;
+}
+
+#turn_indicator {
+  margin-bottom: -30px;
+}
+
+#turn_indicator h2 {
+  font-size: 50px;
+  margin-top: 20px;
+  color: #E8EEF2;
+  text-transform: capitalize;
+}
+
+#paralyse input {
+  margin-bottom: 20px
+}
+
+.confirmation_message {
+  border: 2px solid #F7CB15;
+  margin-top: 250px;
+  padding-bottom: 25px;
+}
+
+.confirmation_message h2 {
+  margin-top: -25px;
+  font-size: 80px;
+  color: #E8EEF2;
+}
+
+.confirmation_message h3 {
+  color: #E8EEF2;
+}
+
+.confirmation_message .btn {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.card {
+  background: #E8EEF2;
+  border-width: 3px;
+  border-color: #F7CB15
+}
+
+.card .fas {
+  color: #173753;
+  margin-top: 10px;
+  font-size: 200px;
+}
+
+.card-title {
+  margin-top: -5px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #F7CB15
+}
+
+input {
+  margin-bottom: 10px;
+}

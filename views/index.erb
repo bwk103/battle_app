@@ -1,7 +1,25 @@
-<form action="/names" method="post">
-  <label for="player_1_name">Player 1 Name</label>
-  <input type="text" name="player_1_name" >
-  <label for="player_2_name">Player 2 Name</label>
-  <input type="text" name="player_2_name" >
-  <input type="submit" value ="Submit">
-</form>
+<div class="row text-center">
+    <div class="col-lg-12">
+      <h1>BattleAPP</h1>
+      <hr>
+    </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <img class="img-fluid" src="images/monster1.png">
+  </div>
+  <div class="col-lg-6">
+    <img class="img-fluid" src="images/monster2.png">
+  </div>
+</div>
+<div class="text-center">
+  <form class="form-group" action="/names" method="post">
+    <label for="player_1_name"></label>
+    <input class="form-control-lg" type="text" name="player_1_name" placeholder="Player 1"><span> Vs </span>
+    <label for="player_2_name"></label>
+    <input class="form-control-lg" type="text" name="player_2_name" placeholder="Player 2" >
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value ="Let's Battle!">
+  </form>
+</div>

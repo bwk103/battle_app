@@ -1,5 +1,5 @@
+# Creates Attack class
 class Attack
-
   def initialize(player)
     @player = player
   end
@@ -17,5 +17,4 @@ class Attack
   def strength
     Kernel.rand(1..10)
   end
-
 end

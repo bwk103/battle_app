@@ -6,8 +6,8 @@ require './lib/paralyse'
 require './lib/heal'
 require './lib/hypnosis'
 
+# Creates a Sinatra App using Modular style
 class BattleApp < Sinatra::Base
-
   enable :sessions
 
   before do
@@ -20,7 +20,7 @@ class BattleApp < Sinatra::Base
 
   post '/names' do
     @game = Game.create_game(Player.new(params['player_1_name']),
-      Player.new(params['player_2_name']))
+                             Player.new(params['player_2_name']))
     redirect('/play')
   end
 
@@ -76,5 +76,4 @@ class BattleApp < Sinatra::Base
   get '/game-over' do
     erb(:finish)
   end
-
 end

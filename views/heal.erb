@@ -1,3 +1,6 @@
-<%=@game.opponent.name%>'s HP has increased to <%=@game.opponent.hit_points%>
-
-<a href="/play">OK</a>
+<div class="confirmation_message text-center">
+  <h1>WHOOP!</h1>
+  <h2><%=@game.opponent.name%> used Heal</h2>
+  <h3><%=@game.opponent.name%>'s HP has increased to <%=@game.opponent.hit_points%></h3>
+  <a class="btn btn-primary" href="/play">OK</a>
+</div>

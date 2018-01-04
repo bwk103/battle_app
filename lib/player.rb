@@ -1,5 +1,6 @@
+# Creates Player class
 class Player
-  DEFAULT_HIT_POINTS = 100
+  DEFAULT_HIT_POINTS = 50
   attr_reader :name, :hit_points, :paralysed, :asleep
 
   def initialize(name, hit_points = DEFAULT_HIT_POINTS)
@@ -23,7 +24,7 @@ class Player
   end
 
   def recover_hit_points(amount)
-    return @hit_points = 100 if exceeds_max_hp?(amount)
+    return @hit_points = DEFAULT_HIT_POINTS if exceeds_max_hp?(amount)
     @hit_points += amount
   end
 

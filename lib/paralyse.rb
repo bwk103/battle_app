@@ -1,5 +1,5 @@
+# Creates Paralse class
 class Paralyse < Attack
-
   def run
     @player.paralysis unless missed?
   end

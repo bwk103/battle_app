@@ -1,3 +1,6 @@
-<%=@game.opponent.name %> tried to paralyse <%=@game.current_player.name %>, but it was unsuccessful
-
-<a href="/play">OK</a>
+<div class="confirmation_message text-center">
+  <h1>MISSED!</h1>
+  <h2><%=@game.opponent.name %> tried to paralyse <%=@game.current_player.name %></h2>
+  <h3>But he missed</h3>
+  <a class="btn btn-primary" href="/play">OK</a>
+</div>

@@ -1,5 +1,4 @@
-feature 'players can be sent to sleep', :type => :feature do
-
+feature 'players can be sent to sleep', type: :feature do
   before(:each) do
     sign_in_and_play
   end
@@ -10,7 +9,7 @@ feature 'players can be sent to sleep', :type => :feature do
 
   scenario 'attacking player will receive confirmation' do
     click_button 'Hypnosis'
-    expect(page).to have_content 'Ben hypnotised Bob and sent them to sleep'
+    expect(page).to have_content 'Ben hypnotised Bob'
   end
 
   scenario 'receiving players will miss one turn' do

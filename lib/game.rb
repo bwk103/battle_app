@@ -1,5 +1,5 @@
+# Creates Game class
 class Game
-
   attr_reader :current_player, :opponent
 
   def initialize(player1, player2)
@@ -29,6 +29,16 @@ class Game
   end
 
   def game_over?
-    opponent.hit_points == 0
+    opponent.hit_points <= 0
+  end
+
+  def fight_word
+    fight_talk.sample
+  end
+
+  private
+
+  def fight_talk
+    ['KAPOW!', 'BOFF!', 'OOFF!', 'POW!', 'WHACK!', 'ZAM!']
   end
 end
