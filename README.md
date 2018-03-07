@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/bwk103/battle_app.svg?branch=master)](https://travis-ci.org/bwk103/battle_app)
-
 [![Coverage Status](https://coveralls.io/repos/github/bwk103/battle_app/badge.svg?branch=master)](https://coveralls.io/github/bwk103/battle_app?branch=master)
 
 ![Title](https://user-images.githubusercontent.com/8667021/37113133-5f200830-223c-11e8-817c-cdc79d05a7dd.png)
